@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Proyecto Sistema Registro Alumnos</title>
+</head>
+<body>
+    <div class="container py-2">
+        <p class="laed">Registro de Alumnos</p
+        <form>
+            <!--Input Nombre Alumno-->
+          <label for="inputNombreAlumno" class="form-label">Nombre Alumno:</label>
+          <input type="text" name="nombreAlumno" id="inputNombreAlumno" placeholder="Ingrese nombre completo del alumno" class="form-control"/>
+          <!--Input Dirección-->
+          <label for="inputDireccionAlumno" class="form-label">Dirección:</label>
+          <input type="text" name="direccionAlumno" id="inputDireccionAlumno" placeholder="Dirección Alumno" class="form-control"/>
+          <!--Input edad-->
+          <label for="inputEdadAlumno" class="form-label">Edad:</label>
+          <input type="number" name="EdadAlumno" id="inputEdadAlumno" placeholder="Edad Alumno" min="6" max="99" class="form-control my-2"/>
+          <!--Input Grado-->
+          <label for="inputGradoAlumno" class="form-label">Grado:</label>
+          <input type="number" name="gradoAlumno" id="inputGradoAlumno" placeholder="Grado" min="1" max="6" class="form"/>
+           <!--Input Grupo-->
+           <div>
+            <label for="selectGrupoAlumno" class="form-label">Grupo:</label>
+               <select class="form-select" id="selectGrupoAlumno">
+                 <option selected>Seleccione el Grupo del alumno</option>
+                 <option value="A">A</option>
+                 <option value="B">B</option>
+                 <option value="C">C</option>
+                 <option value="D">D</option>
+               </select>              
+           </div>
+
+           <label for="inputMatriculaAlumno" class="form-label">Matricula Alumno:</label>
+          <input class="form-control my-2" type ="text" name="matriculAlumno" id="inputMatriculaAlumno" placeholder="matricula del alumno" />
+
+      
+        </form>
+    </div>
+
+    <div class="container py-2">
+        <p class="laed">Registro de Calificaciones</p
+        <form>
+            <!--Input Calificaciones-->
+          <label for="calEsp" class="form-label">Español:</label>
+          <input type="text" name="calEsp" id="calEsp" placeholder="Calificacion Español" class="form-control"/>
+
+
+          <label for="calMat" class="form-label">Matematicas:</label>
+          <input type="text" name="calMat" id="calMat" placeholder="Calificacion Matematicas" class="form-control"/>
+
+
+          <label for="calCie" class="form-label">Ciencias Naturales:</label>
+          <input type="text" name="calCie" id="calCie" placeholder="Calificacion Ciencias Naturales" class="form-control"/>
+
+
+          <label for="calDep" class="form-label">Deportes:</label>
+          <input type="text" name="calDep" id="calDep" placeholder="Calificacion Deportes" class="form-control"/>
+
+          <label for="calIng" class="form-label">Inglésl:</label>
+          <input type="text" name="calIng" id="calIng" placeholder="Calificacion Inglés" class="form-control"/>
+
+          <label for="calArt" class="form-label">Artes Visuales:</label>
+          <input type="text" name="calArt" id="calArt" placeholder="Calificacion Artes Visuales" class="form-control"/>
+
+          <button id="boton" class="btn btn-success" type="reset" onclick="capturar();">Agregar Alumno</button>
+        
+
+          <button id="botonContar" class="btn btn-success" type="reset" onclick="contar(baseAlumnos);">Contar Alumnos</button>
+
+        </form>
+    </div>
+    <!--Tabla para visualizar los registros-->
+    <div class="container">
+        <table class="table" id="tabla">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Nombre del Alumno</th>
+                    <th>Dirección</th>
+                    <th>Edad</th>
+                    <th>Grado</th>
+                    <th>Grupo</th>
+                    <th>Matricula</th>
+
+                    <th>Español</th>
+                    <th>Matematicas</th>
+                    <th>Ciencias Naturales</th>
+                    <th>Deportes</th>
+                    <th>Inglés</th>
+                    <th>Artes Visuales</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+    <!--JavaScript-->
+    <script src="index.js"></script>
+</body>
+</html>
